@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "b946e194-bb43-47fa-b2bc-0eab0931b815",
+		"name": "Node-Rest",
+		"description": "With this API you can add new patient to Database using psychiatrist Id and get the details of particular hospital.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/hospital/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/hospital/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"hospital",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/api/hospital/1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/hospital/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hospital",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "733"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2dd-2iDHNQvx5KE14k+tsN9VPYvokQE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 Aug 2022 04:36:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"Hospital name\": \"Apollo Hospital\",\n        \"Total Psychiatrist count\": 5,\n        \"Total patients count\": 2,\n        \"Psychiatrist Details\": [\n            {\n                \"id\": 1,\n                \"name\": \"Dr Pullen\",\n                \"createdAt\": \"2022-08-24T21:43:57.000Z\",\n                \"updatedAt\": \"2022-08-24T21:43:57.000Z\",\n                \"hospitalId\": 1\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Dr Fillmore\",\n                \"createdAt\": \"2022-08-24T21:45:16.000Z\",\n                \"updatedAt\": \"2022-08-24T21:45:16.000Z\",\n                \"hospitalId\": 1\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Dr Mangle\",\n                \"createdAt\": \"2022-08-24T21:45:44.000Z\",\n                \"updatedAt\": \"2022-08-24T21:45:44.000Z\",\n                \"hospitalId\": 1\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Dr Ken Hurt\",\n                \"createdAt\": \"2022-08-24T21:46:02.000Z\",\n                \"updatedAt\": \"2022-08-24T21:46:02.000Z\",\n                \"hospitalId\": 1\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Dr B. Sick\",\n                \"createdAt\": \"2022-08-24T21:46:33.000Z\",\n                \"updatedAt\": \"2022-08-24T21:46:33.000Z\",\n                \"hospitalId\": 1\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/api/add-patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"psychiatristId\":1,\n   \"name\": \"Ajay\",\n   \"address\": \"House no:-233, B-Complex Opposite to Amazon Mall, NewUniverse, Shimla\",\n   \"email\": \"ajayrw121@gmail.com\",\n   \"phoneNumber\": 1234323423,\n   \"password\": \"dsabcdeA1\",\n   \"photo\": \"https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/add-patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"add-patient"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/api/add-patient",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"psychiatristId\":1,\n   \"name\": \"Ajay\",\n   \"address\": \"House no:-233, B-Complex Opposite to Amazon Mall, NewUniverse, Shimla\",\n   \"email\": \"ajayrw121@gmail.com\",\n   \"phoneNumber\": 1234323423,\n   \"password\": \"dsabcdeA1\",\n   \"photo\": \"https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/add-patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"add-patient"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-g6oW8py4cW9GUK/V7DXWZvsYClA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 25 Aug 2022 04:33:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Patient Added\"\n}"
+				}
+			]
+		}
+	]
+}
